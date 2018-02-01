@@ -10,8 +10,8 @@ public class ValidSudoku{
         //not much
         System.out.println(" ");
         //another one
-        //second tata
-        //third
+        //second
+        //third rara
 
     }
 
