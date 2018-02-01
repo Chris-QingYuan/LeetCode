@@ -3,14 +3,14 @@ import java.util.*;
 /**
  * Created by Qing (Chris) Yuan on Feb/01/2018 1:09 AM
  */
-public class CombinationSum {
+public class CombinationSumII {
 
     private List<List<Integer>> lol = new LinkedList<>();
 
     public static void main(String[] args) {
-        int[] candidates = {2, 3, 6, 7};
-        int target = 7;
-        CombinationSum combinationSum = new CombinationSum();
+        int[] candidates = {10,1,2,7,6,5};
+        int target = 8;
+        CombinationSumII combinationSum = new CombinationSumII();
         System.out.println(combinationSum.findLastNotGreater(candidates,target,candidates.length - 1));
         combinationSum.combinationSum(candidates,target);
 
@@ -37,7 +37,7 @@ public class CombinationSum {
             if(diff == 0){
                 lol.add(new ArrayList<>(stack));
             }else{
-                solve(candidates, diff, stack, i);
+                solve(candidates, diff, stack, i - 1);
             }
             stack.pop();
         }
@@ -45,7 +45,7 @@ public class CombinationSum {
 
 
     public int findLastNotGreater(int[] candidates, int target, int rightLimit){
-        if(target < candidates[0]) return -1; // right limit should NOT be less than 0 here!
+        if(rightLimit < 0 || target < candidates[0]) return -1;
         int left = 0,
                 right = rightLimit,
                 mid;
