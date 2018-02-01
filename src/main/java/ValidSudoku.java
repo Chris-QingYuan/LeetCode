@@ -9,9 +9,9 @@ public class ValidSudoku{
 
         //not much
         System.out.println(" ");
-        //another
-        //sec
-        //third one
+        //another one
+        //second
+        //third
 
     }
 
