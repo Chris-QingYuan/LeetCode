@@ -9,7 +9,7 @@ public class ValidSudoku{
 
         //not much
         System.out.println(" ");
-        //another one
+        //another
         //second
         //third one
 
