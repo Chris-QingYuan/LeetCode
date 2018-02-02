@@ -29,7 +29,7 @@ public class MultiplyStrings {
                 product = (num2Chars[i] - '0') * (num1Chars[j] - '0');
                 k = i + j + 1;
                 while (product > 0) {
-                    product += result[k] - '0';
+                    if(result[k] < '0' || result[k] > '9') result[k] = '0'; else  product += result[k] - '0';
                     result[k] = (char) (product % 10 + '0');
                     product = product/10;
                     k--;
