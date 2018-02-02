@@ -32,6 +32,7 @@ public class CombinationSumII {
         int maxIndex = findLastNotGreater(candidates, target, rightLimit);
         if(maxIndex == -1) return;
         for(int i = maxIndex; i >= 0; i--){
+            if(i < maxIndex && candidates[i] == candidates[i + 1]) continue;
             stack.push(candidates[i]);
             int diff = target - candidates[i];
             if(diff == 0){
